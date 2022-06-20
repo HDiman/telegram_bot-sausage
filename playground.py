@@ -33,7 +33,7 @@ def get_data():
     #
     # soup = BeautifulSoup(src, "lxml")
     #
-    # all_title = soup.find_all(class_="g-user-content")
+    # all_title = soup.find_all(class_="yl27R")
     # for title in all_title:
     #     print(title.text)
 
