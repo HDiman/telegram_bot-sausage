@@ -19,7 +19,7 @@ def get_data():
     req = requests.get(url=url, headers=headers)
     response = req.text
 
-    soup = BeautifulSoup(response, "lxml")
+    soup = BeautifulSoup(response, "html.parser")
     quotes = soup.find_all(class_="sentence__body")
     authors = soup.find_all(class_="sentence__author")
     for quote in quotes:
