@@ -28,8 +28,6 @@ def get_data():
         list_authors.append(author.text)
     dict_quotes = dict(zip(list_quotes, list_authors))
 
-    # for key, value in dict_quotes.items():
-    #     print(f"{key}{value}")
     return dict_quotes
 
 
