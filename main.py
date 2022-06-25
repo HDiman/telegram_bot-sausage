@@ -49,12 +49,10 @@ def telegram_bot(token):
                 bot.send_message(message.chat.id, "Error!!!")
         else:
             bot.send_message(message.chat.id, "Талант. Безумие. Свобода")
-
     try:
-        bot.poling(none_stop=True)
+        bot.polling(none_stop=True)
     except:
         pass
-
 
 
 if __name__ == "__main__":
