@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import random
 import telebot
 from auth_data import token
+import time
 
 
 def get_data():
@@ -49,10 +50,13 @@ def telegram_bot(token):
                 bot.send_message(message.chat.id, "Error!!!")
         else:
             bot.send_message(message.chat.id, "Талант. Безумие. Свобода")
-    try:
-        bot.polling(none_stop=True)
-    except:
-        pass
+    while True:
+        try:
+            bot.polling(none_stop=True)
+        except Exception as e:
+            print(e)  # или просто print(e) если у вас логгера нет,
+            # или import traceback; traceback.print_exc() для печати полной инфы
+            time.sleep(15)
 
 
 if __name__ == "__main__":
