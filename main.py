@@ -50,7 +50,11 @@ def telegram_bot(token):
         else:
             bot.send_message(message.chat.id, "Талант. Безумие. Свобода")
 
-    bot.polling()
+    try:
+        bot.poling(none_stop=True)
+    except:
+        pass
+
 
 
 if __name__ == "__main__":
